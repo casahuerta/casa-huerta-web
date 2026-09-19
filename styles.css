@@ -38,6 +38,11 @@ button, input, select { font: inherit; }
 .button-small { min-height: 42px; padding-inline: 18px; font-size: 13px; }
 .button-outline-light { border-color: rgba(255,255,255,.7); background: transparent; }
 .text-link { display: inline-block; margin-top: 18px; font-weight: 600; text-decoration: none; border-bottom: 1px solid currentColor; }
+.premium-link { display: inline-flex; align-items: center; gap: 8px; }
+.premium-link-icon { position: relative; display: inline-block; width: 22px; height: 22px; border: 1px solid rgba(255,255,255,.7); border-radius: 50%; transition: transform .2s ease, background .2s ease; }
+.premium-link-icon::before { content: ""; position: absolute; top: 5px; right: 5px; width: 7px; height: 7px; border-top: 1.5px solid currentColor; border-right: 1.5px solid currentColor; }
+.premium-link-icon::after { content: ""; position: absolute; left: 5px; bottom: 7px; width: 10px; height: 1.5px; background: currentColor; transform: rotate(-45deg); transform-origin: left center; }
+.premium-link:hover .premium-link-icon { transform: translate(2px,-2px); background: rgba(255,255,255,.1); }
 .light-link { color: white; }
 .eyebrow { margin: 0 0 20px; color: var(--terracotta); font-size: 12px; font-weight: 600; letter-spacing: .16em; text-transform: uppercase; }
 .eyebrow.light { color: #f4d9c9; }
