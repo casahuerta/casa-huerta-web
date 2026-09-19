@@ -4,7 +4,7 @@ if (!document.querySelector('link[rel~="icon"]')) {
   const favicon = document.createElement("link");
   favicon.rel = "icon";
   favicon.type = "image/png";
-  favicon.href = `${siteRoot}assets/images/logo.png?v=3`;
+  favicon.href = `${siteRoot}assets/images/logo.png?v=4`;
   document.head.appendChild(favicon);
 }
 
@@ -13,7 +13,7 @@ class SiteHeader extends HTMLElement {
     this.innerHTML = `
       <header class="site-header inner-header scrolled" data-header>
         <a class="brand" href="${siteRoot}" aria-label="Casa Huerta — početna">
-          <img class="brand-logo" src="${siteRoot}assets/images/logo.png?v=3" alt="Casa Huerta">
+          <img class="brand-logo" src="${siteRoot}assets/images/logo.png?v=4" alt="Casa Huerta">
         </a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-button>
           <span></span><span></span><span></span><span class="sr-only">Otvori izbornik</span>
@@ -33,7 +33,7 @@ class SiteFooter extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <footer>
-        <div class="footer-brand"><img class="footer-logo" src="${siteRoot}assets/images/logo.png?v=3" alt="Casa Huerta"><small>Priroda, mir i točka.</small></div>
+        <div class="footer-brand"><img class="footer-logo" src="${siteRoot}assets/images/logo.png?v=4" alt="Casa Huerta"><small>Priroda, mir i točka.</small></div>
         <div class="footer-links"><a href="tel:+385993846879">+385 99 3846 879</a><a href="https://www.instagram.com/casahuertakarlovac" target="_blank" rel="noreferrer">Instagram</a><a href="https://wa.me/385993846879" target="_blank" rel="noreferrer">WhatsApp</a></div>
         <p>© ${new Date().getFullYear()} Casa Huerta. Sva prava pridržana.</p>
       </footer>`;
