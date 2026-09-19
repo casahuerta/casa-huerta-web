@@ -1,19 +1,21 @@
+const siteRoot = window.location.hostname.endsWith("github.io") ? "/casa-huerta-web/" : "/";
+
 class SiteHeader extends HTMLElement {
   connectedCallback() {
     this.innerHTML = `
       <header class="site-header inner-header scrolled" data-header>
-        <a class="brand" href="/" aria-label="Casa Huerta — početna">
+        <a class="brand" href="${siteRoot}" aria-label="Casa Huerta — početna">
           <span class="brand-mark">CH</span><span class="brand-name">Casa Huerta</span>
         </a>
         <button class="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" data-menu-button>
           <span></span><span></span><span></span><span class="sr-only">Otvori izbornik</span>
         </button>
         <nav class="main-nav" id="main-nav" data-nav>
-          <a href="/smjestaj/">Smještaj</a><a href="/jacuzzi/">Jacuzzi</a>
-          <a href="/dozivljaji/">Doživljaji</a><a href="/lokacija/">Lokacija</a>
-          <a href="/galerija/">Galerija</a><a href="/kontakt/">Kontakt</a>
+          <a href="${siteRoot}smjestaj/">Smještaj</a><a href="${siteRoot}jacuzzi/">Jacuzzi</a>
+          <a href="${siteRoot}dozivljaji/">Doživljaji</a><a href="${siteRoot}lokacija/">Lokacija</a>
+          <a href="${siteRoot}galerija/">Galerija</a><a href="${siteRoot}kontakt/">Kontakt</a>
           <div class="languages" aria-label="Odabir jezika"><button class="active" type="button">HR</button><button type="button">EN</button><button type="button">DE</button></div>
-          <a class="button button-small" href="/rezervacija/">Provjeri dostupnost</a>
+          <a class="button button-small" href="${siteRoot}rezervacija/">Provjeri dostupnost</a>
         </nav>
       </header>`;
   }
